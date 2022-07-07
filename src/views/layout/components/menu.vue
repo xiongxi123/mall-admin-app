@@ -1,7 +1,9 @@
 <template>
   <div class="menu-list">
-    <a-menu :default-selected-keys="['1']" :default-open-keys="['sub1']" mode="inline" theme="dark"
-      :inline-collapsed="$store.state.collapsed">
+    <a-menu :default-selected-keys="['1']"
+    :default-open-keys="['sub1']"
+    mode="inline" theme="dark"
+    :inline-collapsed="$store.state.collapsed">
       <a-menu-item key="1">
         <a-icon type="pie-chart" />
         <span>Option 1</span>
@@ -41,6 +43,17 @@
 </template>
 
 <script>
-export default {
-};
+
 </script>
+
+<style lang="less">
+.menu-list {
+  width: 200px;
+  position: fixed;
+  height: 100%;
+
+  .ant-menu {
+    height: 100%;
+  }
+}
+</style>
